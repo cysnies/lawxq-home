@@ -5,23 +5,13 @@
     "link": "https://lawxq.cn/"
   },
   {
-    "icon": "Compass",
-    "name": "法律星球导航页",
-    "link": "https://nav.lawxq.cn/"
-  },
-  {
     "icon": "Book",
     "name": "法律日记",
     "link": "https://diary.lawxq.cn/"
   },
   {
-    "icon": "Cloud",
-    "name": "互动法界下载",
-    "link": "https://ed.qcea.top/ChaIndex/Space/lawxq"
-  },
-  {
     "icon": "Blog",
-    "name": "互动法界网页版",
-    "link": "https://wg.lawxq.cn/"
+    "name": "互动法界",
+    "link": "https://gamenav.lawxq.cn/"
   }
 ]

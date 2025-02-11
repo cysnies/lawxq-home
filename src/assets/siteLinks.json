@@ -11,7 +11,17 @@
   },
   {
     "icon": "Blog",
-    "name": "互动法界",
-    "link": "https://gamenav.lawxq.cn/"
+    "name": "张三的暑假",
+    "link": "https://wg2.lawxq.cn/"
+  },
+  {
+    "icon": "Blog",
+    "name": "天下没有免费的午餐",
+    "link": "https://wg1.lawxq.cn/"
+  },
+  {
+    "icon": "Blog",
+    "name": "冰糖奇遇记",
+    "link": "https://wg.lawxq.cn/"
   }
 ]

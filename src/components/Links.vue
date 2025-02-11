@@ -142,8 +142,8 @@ onMounted(() => {
       justify-content: center;
       :deep(.swiper-pagination-bullet) {
         background-color: #fff;
-        width: 20px;
-        height: 4px;
+        width: 30px;
+        height: 8px;
         margin: 0 4px;
         border-radius: 10px;
         opacity: 0.2;

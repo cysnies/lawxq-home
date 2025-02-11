@@ -1,6 +1,6 @@
 [
   {
-    "group": "法律星球网站",
+    "group": "网站",
     "links": [
       {
         "icon": "Book",
@@ -29,6 +29,46 @@
       },
       {
         "icon": "Blog",
+        "name": "冰糖奇遇记",
+        "link": "https://wg.lawxq.cn/"
+      }
+    ]
+  },
+  {
+    "group": "互动法界安卓版",
+    "links": [
+      {
+        "icon": "CloudDownloadAlt",
+        "name": "张三的暑假",
+        "link": "https://wg2.lawxq.cn/"
+      },
+      {
+        "icon": "CloudDownloadAlt",
+        "name": "天下没有免费的午餐",
+        "link": "https://wg1.lawxq.cn/"
+      },
+      {
+        "icon": "CloudDownloadAlt",
+        "name": "冰糖奇遇记",
+        "link": "https://wg.lawxq.cn/"
+      }
+    ]
+  },
+  {
+    "group": "互动法界电脑版",
+    "links": [
+      {
+        "icon": "CloudDownloadAlt",
+        "name": "张三的暑假",
+        "link": "https://wg2.lawxq.cn/"
+      },
+      {
+        "icon": "CloudDownloadAlt",
+        "name": "天下没有免费的午餐",
+        "link": "https://wg1.lawxq.cn/"
+      },
+      {
+        "icon": "CloudDownloadAlt",
         "name": "冰糖奇遇记",
         "link": "https://wg.lawxq.cn/"
       }

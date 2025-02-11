@@ -1,12 +1,9 @@
 <template>
-  <!-- 加载 -->
-  <Loading />
   <!-- 壁纸 -->
-  <Background @loadComplete="loadComplete" />
   <BackgroundAnimation />
   <!-- 主界面 -->
   <Transition name="fade" mode="out-in">
-    <main id="main" v-if="store.imgLoadStatus">
+    <main id="main">
       <div class="container" v-show="!store.backgroundShow">
         <section class="all" v-show="!store.setOpenState">
           <MainLeft />
@@ -38,14 +35,11 @@ import { helloInit, checkDays } from "@/utils/getTime.js";
 import { HamburgerButton, CloseSmall } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
 import { Icon } from "@vicons/utils";
-import Loading from "@/components/Loading.vue";
 import MainLeft from "@/views/Main/Left.vue";
 import MainRight from "@/views/Main/Right.vue";
-import Background from "@/components/Background.vue";
 import Footer from "@/components/Footer.vue";
 import Box from "@/views/Box/index.vue";
 import cursorInit from "@/utils/cursor.js";
-import config from "@/../package.json";
 
 import BackgroundAnimation from './components/BackgroundAnimation.vue';
 
@@ -54,16 +48,6 @@ const store = mainStore();
 // 页面宽度
 const getWidth = () => {
   store.setInnerWidth(window.innerWidth);
-};
-
-// 加载完成事件
-const loadComplete = () => {
-  nextTick(() => {
-    // 欢迎提示
-    helloInit();
-    // 默哀模式
-    checkDays();
-  });
 };
 
 // 监听宽度变化
@@ -86,17 +70,6 @@ onMounted(() => {
     return false;
   };
 
-  // 鼠标中键事件
-  window.addEventListener("mousedown", (event) => {
-    if (event.button == 1) {
-      store.backgroundShow = !store.backgroundShow;
-      ElMessage({
-        message: `已${store.backgroundShow ? "开启" : "退出"}壁纸展示状态`,
-        grouping: true,
-      });
-    }
-  });
-
   // 监听当前页面宽度
   getWidth();
   window.addEventListener("resize", getWidth);
@@ -107,6 +80,11 @@ onMounted(() => {
   const styleContent = "color: rgb(30,152,255);";
   const title1 = "欢迎来到法律星球";
 });
+
+// 欢迎提示
+helloInit();
+// 默哀模式
+checkDays();
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", getWidth);

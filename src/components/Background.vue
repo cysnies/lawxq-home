@@ -1,5 +1,6 @@
 <template>
   <div :class="store.backgroundShow ? 'cover show' : 'cover'">
+    <!-- 移除以下代码 -->
     <img
       v-show="store.imgLoadStatus"
       :src="bgUrl"

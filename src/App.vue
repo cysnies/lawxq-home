@@ -3,6 +3,7 @@
   <Loading />
   <!-- 壁纸 -->
   <Background @loadComplete="loadComplete" />
+  <BackgroundAnimation />
   <!-- 主界面 -->
   <Transition name="fade" mode="out-in">
     <main id="main" v-if="store.imgLoadStatus">
@@ -45,6 +46,8 @@ import Footer from "@/components/Footer.vue";
 import Box from "@/views/Box/index.vue";
 import cursorInit from "@/utils/cursor.js";
 import config from "@/../package.json";
+
+import BackgroundAnimation from './components/BackgroundAnimation.vue';
 
 const store = mainStore();
 

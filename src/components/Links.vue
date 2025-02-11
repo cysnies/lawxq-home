@@ -1,14 +1,14 @@
 <template>
-  <div v-if="siteLinks[0]" class="links">
+  <div v-if="groupedSiteLinks.length > 0" class="links">
     <div class="line">
       <Icon size="20">
         <Link />
       </Icon>
-      <span class="title">网站列表</span>
+      <span class="title">网站列表 - {{ currentGroupTitle }}</span>
     </div>
     <!-- 网站列表 -->
     <Swiper
-      v-if="siteLinks[0]"
+      v-if="groupedSiteLinks.length > 0"
       :modules="[Pagination, Mousewheel]"
       :slides-per-view="1"
       :space-between="40"
@@ -18,13 +18,15 @@
         bulletElement: 'div',
       }"
       :mousewheel="true"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
     >
-      <SwiperSlide v-for="site in siteLinksList" :key="site">
+      <SwiperSlide v-for="(group, index) in groupedSiteLinks" :key="index">
         <el-row class="link-all" :gutter="20">
-          <el-col v-for="(item, index) in site" :span="8" :key="item">
+          <el-col v-for="(item, itemIndex) in group.links" :span="8" :key="itemIndex">
             <div
               class="item cards"
-              :style="index < 3 ? 'margin-bottom: 20px' : null"
+              :style="itemIndex < 3 ? 'margin-bottom: 20px' : null"
               @click="jumpLink(item)"
             >
               <Icon size="26">
@@ -51,16 +53,6 @@ import siteLinks from "@/assets/siteLinks.json";
 
 const store = mainStore();
 
-// 计算网站链接
-const siteLinksList = computed(() => {
-  const result = [];
-  for (let i = 0; i < siteLinks.length; i += 6) {
-    const subArr = siteLinks.slice(i, i + 6);
-    result.push(subArr);
-  }
-  return result;
-});
-
 // 网站链接图标
 const siteIcon = {
   Blog,
@@ -70,6 +62,40 @@ const siteIcon = {
   Book,
   Fire,
   LaptopCode,
+};
+
+// 计算分组后的网站链接
+const groupedSiteLinks = computed(() => {
+  return siteLinks.map((group) => {
+    return {
+      groupTitle: group.group,
+      links: group.links
+    };
+  });
+});
+
+// 当前分组标题
+const currentGroupTitle = ref('');
+
+// Swiper 实例
+let swiperInstance = null;
+
+// 初始化 Swiper 实例
+const onSwiper = (swiper) => {
+  swiperInstance = swiper;
+  updateCurrentGroupTitle(swiper.activeIndex);
+};
+
+// 切换分组时更新当前分组标题
+const onSlideChange = () => {
+  if (swiperInstance) {
+    updateCurrentGroupTitle(swiperInstance.activeIndex);
+  }
+};
+
+// 更新当前分组标题
+const updateCurrentGroupTitle = (index) => {
+  currentGroupTitle.value = groupedSiteLinks.value[index].groupTitle;
 };
 
 // 链接跳转

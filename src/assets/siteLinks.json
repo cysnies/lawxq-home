@@ -1,27 +1,37 @@
 [
   {
-    "icon": "Book",
-    "name": "法律星球主页",
-    "link": "https://lawxq.cn/"
+    "group": "法律星球网站",
+    "links": [
+      {
+        "icon": "Book",
+        "name": "法律星球主页",
+        "link": "https://lawxq.cn/"
+      },
+      {
+        "icon": "Book",
+        "name": "法律日记",
+        "link": "https://diary.lawxq.cn/"
+      }
+    ]
   },
   {
-    "icon": "Book",
-    "name": "法律日记",
-    "link": "https://diary.lawxq.cn/"
-  },
-  {
-    "icon": "Blog",
-    "name": "张三的暑假",
-    "link": "https://wg2.lawxq.cn/"
-  },
-  {
-    "icon": "Blog",
-    "name": "天下没有免费的午餐",
-    "link": "https://wg1.lawxq.cn/"
-  },
-  {
-    "icon": "Blog",
-    "name": "冰糖奇遇记",
-    "link": "https://wg.lawxq.cn/"
+    "group": "互动法界网页版",
+    "links": [
+      {
+        "icon": "Blog",
+        "name": "张三的暑假",
+        "link": "https://wg2.lawxq.cn/"
+      },
+      {
+        "icon": "Blog",
+        "name": "天下没有免费的午餐",
+        "link": "https://wg1.lawxq.cn/"
+      },
+      {
+        "icon": "Blog",
+        "name": "冰糖奇遇记",
+        "link": "https://wg.lawxq.cn/"
+      }
+    ]
   }
 ]

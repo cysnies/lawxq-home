@@ -40,7 +40,7 @@
       msz = sz / 4;
   
       // 设置帧率为30FPS
-      p.frameRate(30);
+      p.frameRate(24);
   
       init(p);
   }
@@ -187,90 +187,94 @@
   }
   
   function draw(p) {
-      p.background("#140c25");
-  
-      p.scale(1, -1);
-      p.translate(0, -p.windowHeight);
-  
-      p.translate(p.windowWidth / 2, p.windowHeight / 2);
-  
-      p.noStroke();
-      for (let i = 0; i < N; i++) {
-          let item = back[i];
-          p.fill(item[0]);
-          p.ellipse(0, 0, (viewport - 40) * (1 - i / (N + 1)));
-      }
-  
-      p.noFill();
-      p.strokeWeight((viewport - 40) / 2 / (b + 1));
-      for (let i = 0; i < b; i++) {
-          let group = middle[i];
-          for (let j = 0; j < group.length; j++) {
-              let item = group[j];
-  
-              p.stroke(item[0]);
-              p.arc(0, 0, (viewport - 40) * (1 - i / (b + 1)), (viewport - 40) * (1 - i / (b + 1)), item[1] + th / 8 * (1.5 + (1 - i / (b + 1))) * item[3], item[2] + th / 8 * (1.5 + (1 - i / (b + 1))) * item[3]);
-          }
-      }
-  
-      p.strokeWeight((viewport - 40) / 2 / (t + 1));
-      for (let i = 0; i < t; i++) {
-          let group = inter[i];
-          for (let j = 0; j < group.length; j++) {
-              let item = group[j];
-              p.stroke(item[0]);
-              p.arc(0, 0, (viewport - 40) * (1 - i / (t + 1)), (viewport - 40) * (1 - i / (t + 1)), item[1] + th / 6 * (1.5 + (1 - i / (t + 1))) * item[3], item[2] + th / 6 * (1.5 + (1 - i / (t + 1))) * item[3]);
-          }
-      }
-  
-      p.strokeWeight((viewport - 40) / 2 / (n + 1));
-      for (let i = 0; i < n; i++) {
-          let group = front[i];
-          for (let j = 0; j < group.length; j++) {
-              let item = group[j];
-              p.stroke(item[0]);
-              p.arc(0, 0, (viewport - 40) * (1 - i / (n + 1)), (viewport - 40) * (1 - i / (n + 1)), item[1] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[3], item[2] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[3]);
-          }
-      }
-  
-      p.strokeWeight((viewport - 40) / (n + 1) / 2);
-      for (let i = 0; i < n; i++) {
-          let group = points[i];
-          for (let j = 0; j < group.length; j++) {
-              let item = group[j];
-              p.stroke(item[0]);
-              let r = (viewport) * (1 - i / (n + 1));
-              p.arc(0, 0, r, r, item[1] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[2], item[1] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[2] + 0.0001);
-          }
-      }
-  
-      p.push();
-      p.noStroke();
-      p.rotate(2 * th / 3);
-      // planet.set( mouseX - windowWidth/2, -mouseY + windowHeight/2, 0 );
-      for (let i = 0; i < N; i++) {
-  
-          let j = i / (N - 1);
-          p.push();
-          p.translate(planet.x, planet.y);
-          let norm = planet.copy().normalize();
-          p.translate(norm.x * msz * j / 2 + 0.1, norm.y * msz * j / 2 + 0.1);
-          p.rotate(planet.heading());
-          let k1 = p.lerpColor(c2, c3, 0.5);
-          let k2 = p.lerpColor(c1, c2, 0.2);
-          let s = p.map(1 - (planet.mag() / viewport), 0, 0.999, 0, 0.5);
-          let k = p.lerpColor(k1, k2, p.pow(j, s));
-          k.setAlpha(25);
-          p.fill(k);
-          p.ellipse(0, 0, sz - msz * j, sz - msz * j * 0.36);
-          p.pop();
-      }
-      p.pop();
-  
-      // 减慢旋转速度
-      th += 0.005;
-  
-  }
+    p.background("#140c25");
+
+    p.scale(1, -1);
+    p.translate(0, -p.windowHeight);
+
+    // 定义向左的偏移量，你可以根据需要调整这个值
+    const offsetX = 100; 
+
+    // 在水平方向上减去偏移量
+    p.translate(p.windowWidth / 2 - offsetX, p.windowHeight / 2); 
+
+    p.noStroke();
+    for (let i = 0; i < N; i++) {
+        let item = back[i];
+        p.fill(item[0]);
+        p.ellipse(0, 0, (viewport - 40) * (1 - i / (N + 1)));
+    }
+
+    p.noFill();
+    p.strokeWeight((viewport - 40) / 2 / (b + 1));
+    for (let i = 0; i < b; i++) {
+        let group = middle[i];
+        for (let j = 0; j < group.length; j++) {
+            let item = group[j];
+
+            p.stroke(item[0]);
+            p.arc(0, 0, (viewport - 40) * (1 - i / (b + 1)), (viewport - 40) * (1 - i / (b + 1)), item[1] + th / 8 * (1.5 + (1 - i / (b + 1))) * item[3], item[2] + th / 8 * (1.5 + (1 - i / (b + 1))) * item[3]);
+        }
+    }
+
+    p.strokeWeight((viewport - 40) / 2 / (t + 1));
+    for (let i = 0; i < t; i++) {
+        let group = inter[i];
+        for (let j = 0; j < group.length; j++) {
+            let item = group[j];
+            p.stroke(item[0]);
+            p.arc(0, 0, (viewport - 40) * (1 - i / (t + 1)), (viewport - 40) * (1 - i / (t + 1)), item[1] + th / 6 * (1.5 + (1 - i / (t + 1))) * item[3], item[2] + th / 6 * (1.5 + (1 - i / (t + 1))) * item[3]);
+        }
+    }
+
+    p.strokeWeight((viewport - 40) / 2 / (n + 1));
+    for (let i = 0; i < n; i++) {
+        let group = front[i];
+        for (let j = 0; j < group.length; j++) {
+            let item = group[j];
+            p.stroke(item[0]);
+            p.arc(0, 0, (viewport - 40) * (1 - i / (n + 1)), (viewport - 40) * (1 - i / (n + 1)), item[1] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[3], item[2] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[3]);
+        }
+    }
+
+    p.strokeWeight((viewport - 40) / (n + 1) / 2);
+    for (let i = 0; i < n; i++) {
+        let group = points[i];
+        for (let j = 0; j < group.length; j++) {
+            let item = group[j];
+            p.stroke(item[0]);
+            let r = (viewport) * (1 - i / (n + 1));
+            p.arc(0, 0, r, r, item[1] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[2], item[1] + th / 2 * (1.5 + (1 - i / (n + 1)) / 2) * item[2] + 0.0001);
+        }
+    }
+
+    p.push();
+    p.noStroke();
+    p.rotate(2 * th / 3);
+    // planet.set( mouseX - windowWidth/2, -mouseY + windowHeight/2, 0 );
+    for (let i = 0; i < N; i++) {
+
+        let j = i / (N - 1);
+        p.push();
+        p.translate(planet.x, planet.y);
+        let norm = planet.copy().normalize();
+        p.translate(norm.x * msz * j / 2 + 0.1, norm.y * msz * j / 2 + 0.1);
+        p.rotate(planet.heading());
+        let k1 = p.lerpColor(c2, c3, 0.5);
+        let k2 = p.lerpColor(c1, c2, 0.2);
+        let s = p.map(1 - (planet.mag() / viewport), 0, 0.999, 0, 0.5);
+        let k = p.lerpColor(k1, k2, p.pow(j, s));
+        k.setAlpha(25);
+        p.fill(k);
+        p.ellipse(0, 0, sz - msz * j, sz - msz * j * 0.36);
+        p.pop();
+    }
+    p.pop();
+
+    // 减慢旋转速度
+    th += 0.005;
+
+}
   
   onMounted(() => {
       new p5((p) => {

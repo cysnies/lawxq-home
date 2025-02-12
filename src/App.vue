@@ -97,7 +97,8 @@ onBeforeUnmount(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  //height: 100%;
+  height: 100vh;
   transform: scale(1.2);
   transition: transform 0.3s;
   animation: fade-blur-main-in 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -105,6 +106,8 @@ onBeforeUnmount(() => {
   .container {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column; // 改为垂直排列
     margin: 0 auto;
     padding: 0 0.5vw;
     .all {
@@ -121,7 +124,8 @@ onBeforeUnmount(() => {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      //height: 100%;
+      height: 100vh;
       background-color: #00000080;
       backdrop-filter: blur(20px);
       z-index: 2;
@@ -158,7 +162,7 @@ onBeforeUnmount(() => {
     }
   }
   @media (max-height: 720px) {
-    overflow-y: auto;
+    //overflow-y: auto;
     overflow-x: hidden;
     .container {
       height: 721px;

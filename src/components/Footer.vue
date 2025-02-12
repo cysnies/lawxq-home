@@ -101,8 +101,7 @@ const siteUrl = computed(() => {
     font-size: 0.9rem;
     &.blur {
       font-size: 0.9rem;
-    }
-  }
+    }  }
   @media (max-width: 560px) {
     .c-hidden {
       display: none;

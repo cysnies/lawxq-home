@@ -23,7 +23,8 @@ const store = mainStore();
   }
   @media (max-width: 720px) {
     margin-right: 0;
-    width: 100%;
+    width: 100%; // 在移动端将宽度设置为 100%
+    height: 100vh;
   }
 }
 </style>

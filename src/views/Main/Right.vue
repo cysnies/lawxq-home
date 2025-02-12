@@ -39,7 +39,7 @@ const siteUrl = computed(() => {
   .logo {
     width: 100%;
     font-family: "Pacifico-Regular";
-    font-size: 2.25rem;
+    font-size: 1.5rem; // 减小字体大小
     position: fixed;
     top: 6%;
     left: 0;
@@ -53,16 +53,17 @@ const siteUrl = computed(() => {
       display: none;
     }
     @media (max-height: 720px) {
-      width: calc(100% + 6px);
+      width: 100%; // 调整宽度
       top: 43.26px; // 721px * 0.06
     }
     @media (max-width: 390px) {
-        width: 391px;
+      font-size: 1.2rem; // 进一步减小字体大小
     }
   }
   @media (max-width: 720px) {
     margin-left: 0;
     width: 100%;
+    height: 100vh;
     &.hidden {
       display: none;
     }

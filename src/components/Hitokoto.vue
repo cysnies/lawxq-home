@@ -58,7 +58,7 @@ const getHitokotoData = async () => {
         fill: "#efefef",
       }),
     });
-    hitokotoData.text = "这里应该显示一句话";
+    hitokotoData.text = "欢迎来到法律星球！";
     hitokotoData.from = "法律星球";
   }
 };

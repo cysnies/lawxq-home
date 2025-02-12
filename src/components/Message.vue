@@ -114,6 +114,7 @@ watch(
         font-size: 2rem;
         @media (min-width: 721px) and (max-width: 789px) {
           display: none;
+          width: 100%;
         }
       }
     }
@@ -131,6 +132,7 @@ watch(
 
     @media (max-width: 720px) {
       max-width: 100%;
+      width: 100%;
     }
   }
 

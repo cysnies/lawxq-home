@@ -29,7 +29,6 @@
 <script setup>
 import { getCurrentTime } from "@/utils/getTime";
 import { mainStore } from "@/store";
-import Music from "@/components/Music.vue";
 import Hitokoto from "@/components/Hitokoto.vue";
 
 const store = mainStore();
@@ -37,9 +36,6 @@ const store = mainStore();
 // 当前时间
 const currentTime = ref({});
 const timeInterval = ref(null);
-
-// 播放器 id
-const playerHasId = import.meta.env.VITE_SONG_ID;
 
 // 更新时间
 const updateTimeData = () => {

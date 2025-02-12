@@ -129,6 +129,7 @@ onBeforeUnmount(() => {
     }
     @media (max-width: 1200px) {
       padding: 0 2vw;
+      width: 100%;
     }
   }
   .menu {
@@ -153,6 +154,7 @@ onBeforeUnmount(() => {
     }
     @media (min-width: 721px) {
       display: none;
+      width: 100%;
     }
   }
   @media (max-height: 720px) {
@@ -168,21 +170,26 @@ onBeforeUnmount(() => {
         // w 1201px ~ max
         padding-left: 0.7vw;
         padding-right: 0.25vw;
+        width: 100%;
         @media (max-width: 1200px) { // w 1101px ~ 1280px
           padding-left: 2.3vw;
           padding-right: 1.75vw;
+          width: 100%;
         }
         @media (max-width: 1100px) { // w 993px ~ 1100px
           padding-left: 2vw;
           padding-right: calc(2vw - 6px);
+          width: 100%;
         }
         @media (max-width: 992px) { // w 901px ~ 992px
           padding-left: 2.3vw;
           padding-right: 1.7vw;
+          width: 100%;
         }
         @media (max-width: 900px) { // w 391px ~ 900px
           padding-left: 2vw;
           padding-right: calc(2vw - 6px);
+          width: 100%;
         }
       }
     }
@@ -191,12 +198,14 @@ onBeforeUnmount(() => {
       left: 170.5px; // 391 * 0.5 - 25px
       @media (min-width: 391px) {
         left: calc(50% - 25px);
+        width: 100%;
       }
     }
     .f-ter {
       top: 675px; // 721px - 46px
       @media (min-width: 391px) {
         padding-left: 6px;
+        width: 100%;
       }
     }
   }
@@ -204,15 +213,18 @@ onBeforeUnmount(() => {
     overflow-x: auto;
     .container {
       width: 391px;
+      width: 100%;
     }
     .menu {
       left: 167.5px; // 391px * 0.5 - 28px
     }
     .f-ter {
       width: 391px;
+      width: 100%;
     }
     @media (min-height: 721px) {
       overflow-y: hidden;
+      width: 100%;
     }
   }
 }

@@ -56,6 +56,11 @@
         "icon": "Code",
         "name": "敬请期待",
         "link": "/"
+      },
+      {
+        "icon": "Book",
+        "name": "查看剧本",
+        "link": "https://d.lawxq.cn/%E6%B3%95%E5%BD%B1%E8%BF%B7%E8%B8%AA/%E5%89%A7%E6%9C%AC"
       }
     ]
   }

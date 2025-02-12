@@ -1,21 +1,31 @@
 [
   {
-    "group": "法律星球网站",
+    "group": "法律日记",
     "links": [
       {
-        "icon": "Compass",
-        "name": "法律星球主页",
-        "link": "https://lawxq.cn/"
+        "icon": "Book",
+        "name": "为何我被诬陷",
+        "link": "https://diary.lawxq.cn/archives/wei-he-wo-bei-wu-xian"
       },
       {
         "icon": "Book",
-        "name": "法律日记",
-        "link": "https://diary.lawxq.cn/"
+        "name": "噪音扰民何时休",
+        "link": "https://diary.lawxq.cn/archives/zao-yin-rao-min-he-shi-xiu"
+      },
+      {
+        "icon": "Book",
+        "name": "花陨之泪",
+        "link": "https://diary.lawxq.cn/archives/hua-yun-zhi-lei"
+      },
+      {
+        "icon": "Book",
+        "name": "再也不氪金了",
+        "link": "https://diary.lawxq.cn/archives/zai-ye-bu-ke-jin-liao"
       }
     ]
   },
   {
-    "group": "互动法界网页版",
+    "group": "互动法界",
     "links": [
       {
         "icon": "Cloud",
@@ -31,46 +41,21 @@
         "icon": "Cloud",
         "name": "冰糖奇遇记",
         "link": "https://wg.lawxq.cn/"
+      },
+      {
+        "icon": "Download",
+        "name": "其他平台下载",
+        "link": "https://d.lawxq.cn/%E4%BA%92%E5%8A%A8%E6%B3%95%E7%95%8C"
       }
     ]
   },
   {
-    "group": "互动法界安卓版",
+    "group": "法影迷踪",
     "links": [
       {
-        "icon": "Android",
-        "name": "张三的暑假",
-        "link": "https://d.lawxq.cn/d/lawxq/%E5%BC%A0%E4%B8%89%E7%9A%84%E6%9A%91%E5%81%87.apk"
-      },
-      {
-        "icon": "Android",
-        "name": "天下没有免费的午餐",
-        "link": "https://d.lawxq.cn/d/lawxq/%E5%A4%A9%E4%B8%8B%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%88%E9%A4%90.apk"
-      },
-      {
-        "icon": "Android",
-        "name": "冰糖奇遇记",
-        "link": "https://d.lawxq.cn/d/lawxq/%E5%86%B0%E7%B3%96%E5%A5%87%E9%81%87%E8%AE%B0.apk"
-      }
-    ]
-  },
-  {
-    "group": "互动法界电脑版",
-    "links": [
-      {
-        "icon": "Windows",
-        "name": "张三的暑假",
-        "link": "https://d.lawxq.cn/d/lawxq/%E5%BC%A0%E4%B8%89%E7%9A%84%E6%9A%91%E5%81%87-windows.zip"
-      },
-      {
-        "icon": "Windows",
-        "name": "天下没有免费的午餐",
-        "link": "https://d.lawxq.cn/d/lawxq/%E5%A4%A9%E4%B8%8B%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%88%E9%A4%90-windows.zip"
-      },
-      {
-        "icon": "Windows",
-        "name": "冰糖奇遇记",
-        "link": "https://d.lawxq.cn/d/lawxq/%E5%86%B0%E7%B3%96%E5%A5%87%E9%81%87%E8%AE%B0-windows.zip"
+        "icon": "Code",
+        "name": "敬请期待",
+        "link": "/"
       }
     ]
   }

@@ -4,7 +4,7 @@
       <Icon size="20">
         <Link />
       </Icon>
-      <span class="title">导航 - {{ currentGroupTitle }}</span>
+      <span class="title">{{ currentGroupTitle }}</span>
     </div>
     <!-- 网站列表 -->
     <Swiper

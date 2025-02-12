@@ -3,7 +3,7 @@
     "group": "网站",
     "links": [
       {
-        "icon": "Book",
+        "icon": "Compass",
         "name": "法律星球主页",
         "link": "https://lawxq.cn/"
       },
@@ -18,17 +18,17 @@
     "group": "互动法界网页版",
     "links": [
       {
-        "icon": "Blog",
+        "icon": "Cloud",
         "name": "张三的暑假",
         "link": "https://wg2.lawxq.cn/"
       },
       {
-        "icon": "Blog",
+        "icon": "Cloud",
         "name": "天下没有免费的午餐",
         "link": "https://wg1.lawxq.cn/"
       },
       {
-        "icon": "Blog",
+        "icon": "Cloud",
         "name": "冰糖奇遇记",
         "link": "https://wg.lawxq.cn/"
       }
@@ -38,17 +38,17 @@
     "group": "互动法界安卓版",
     "links": [
       {
-        "icon": "CloudDownloadAlt",
+        "icon": "Android",
         "name": "张三的暑假",
         "link": "https://d.lawxq.cn/d/lawxq/%E5%BC%A0%E4%B8%89%E7%9A%84%E6%9A%91%E5%81%87.apk"
       },
       {
-        "icon": "CloudDownloadAlt",
+        "icon": "Android",
         "name": "天下没有免费的午餐",
         "link": "https://d.lawxq.cn/d/lawxq/%E5%A4%A9%E4%B8%8B%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%88%E9%A4%90.apk"
       },
       {
-        "icon": "CloudDownloadAlt",
+        "icon": "Android",
         "name": "冰糖奇遇记",
         "link": "https://d.lawxq.cn/d/lawxq/%E5%86%B0%E7%B3%96%E5%A5%87%E9%81%87%E8%AE%B0.apk"
       }
@@ -58,17 +58,17 @@
     "group": "互动法界电脑版",
     "links": [
       {
-        "icon": "CloudDownloadAlt",
+        "icon": "Windows",
         "name": "张三的暑假",
         "link": "https://d.lawxq.cn/d/lawxq/%E5%BC%A0%E4%B8%89%E7%9A%84%E6%9A%91%E5%81%87-windows.zip"
       },
       {
-        "icon": "CloudDownloadAlt",
+        "icon": "Windows",
         "name": "天下没有免费的午餐",
         "link": "https://d.lawxq.cn/d/lawxq/%E5%A4%A9%E4%B8%8B%E6%B2%A1%E6%9C%89%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%88%E9%A4%90-windows.zip"
       },
       {
-        "icon": "CloudDownloadAlt",
+        "icon": "Windows",
         "name": "冰糖奇遇记",
         "link": "https://d.lawxq.cn/d/lawxq/%E5%86%B0%E7%B3%96%E5%A5%87%E9%81%87%E8%AE%B0-windows.zip"
       }

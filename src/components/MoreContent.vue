@@ -26,7 +26,7 @@ iframe {
 export default {
   data () {
     return {
-      src: 'https://ai.lawxq.cn/chat/share?shareId=p5vi0ajwyvq9ri6d0u99w8hg&showHistory=0'
+      src: 'https://ai.lawxq.cn/ui/chat/373059a680a5f343'
     }
   }
 }

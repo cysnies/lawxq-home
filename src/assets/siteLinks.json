@@ -29,23 +29,18 @@
     "links": [
       {
         "icon": "Cloud",
-        "name": "张三的暑假",
-        "link": "https://wg2.lawxq.cn/"
+        "name": "网页版",
+        "link": "https://selwg.lawxq.cn/"
       },
       {
-        "icon": "Cloud",
-        "name": "天下没有免费的午餐",
-        "link": "https://wg1.lawxq.cn/"
+        "icon": "Android",
+        "name": "Android 版",
+        "link": "https://d.lawxq.cn/%E4%BA%92%E5%8A%A8%E6%B3%95%E7%95%8C/Android%E5%AE%89%E8%A3%85%E5%8C%85"
       },
       {
-        "icon": "Cloud",
-        "name": "冰糖奇遇记",
-        "link": "https://wg.lawxq.cn/"
-      },
-      {
-        "icon": "Download",
-        "name": "其他平台下载",
-        "link": "https://d.lawxq.cn/%E4%BA%92%E5%8A%A8%E6%B3%95%E7%95%8C"
+        "icon": "Windows",
+        "name": "Windows 版",
+        "link": "https://d.lawxq.cn/%E4%BA%92%E5%8A%A8%E6%B3%95%E7%95%8C/Windows%E5%AE%89%E8%A3%85%E5%8C%85"
       }
     ]
   },
